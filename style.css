@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.head{
+    text-align: center;
+    margin-top: 20px;
+}
+.images{
+    text-align: left;
+    margin-top: 20px;
+}
+nav{
+    text-align: right;
+    margin-top: 20px;
+    display: block;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 20px;
+}

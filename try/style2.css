@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+html,body{
+    height: 200%;
+    width: 100%;
+    /* background-image: url("https://tse2.mm.bing.net/th/id/OIP.b13FgzwJyDQKrqqHTGtlVgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3");
+    background-size: cover; */
+
+}
+.div1{
+    width: 240px;
+    height: 40px;
+    background-color: rgb(255, 174, 0);;
+}
+.div2{
+    width: 240px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+.div3{
+    width: 240px;
+    height: 40px;
+    background-color: rgb(52, 144, 69);
+}
