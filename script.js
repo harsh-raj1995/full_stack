@@ -36,7 +36,15 @@ a.style.backgroundColor="Red"
 
 let b= document.querySelector("body")
 let btn=document.querySelector("button")
+let cur =0
 btn.addEventListener("click",function(){
+    if (cur==0){
     b.style.backgroundColor="Black"
     b.style.color="White"
+    cur=1
+    }else{
+        cur=0
+        b.style.backgroundColor="White"
+        b.style.color="Black"
+    }
 })
