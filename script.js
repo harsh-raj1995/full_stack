@@ -17,9 +17,9 @@ function greet(){
 display(greet)
 
 //arrow function
-a();
+console.log(a)
 var a=()=>{
     console.log("hi")
 }
 console.log(a)
-
+a();
