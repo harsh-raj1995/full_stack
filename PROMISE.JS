@@ -72,3 +72,5 @@ function dis(){
 }
 dis(obj)
 dis(obj2)
+//undefined
+dis.call(obj)
