@@ -115,10 +115,47 @@ console.log(obj.object.name)
 //promise -- used to handle asynchronous operations
  //// callback -- when we call function and pass another function as parameter to it and that function will be called after some time
  function task1(callback){
-    console.log("task 1")
-    callback()
+    setTimeout(()=>{
+        console.log("task 1 completed")
+        callback()
+    },10000)
  }//higher order function -- when we pass function as parameter to another function
 function task2(){
-    console.log("task 2")
+    setTimeout(()=>{
+        console.log("task 2 completed")
+    },5000)
 }//callback function -- when we pass function as parameter to another function and that function will be called after some time
 task1(task2)
+//callback hell -- when we have multiple nested callbacks
+// task1(function(){
+//     task2(function(){
+//         console.log("all tasks completed")
+//     })
+// })
+//piramid of doom -- when we have multiple nested callbacks and it becomes difficult to read and maintain code
+// task1(function(){
+//     task2(function(){
+//         task3(function(){
+//             task4(function(){
+//                 console.log("all tasks completed")
+//             })
+//         })
+//     })
+// }
+
+//promise -- used to handle asynchronous operations and avoid callback hell
+let promise = new Promise((resolve,reject)=>{
+    let a=9
+    if(a%2==0){
+        resolve("even number "+a)
+        //resolve -- used to return value when promise is resolved
+    }else{
+        reject(a+" is odd number")
+        //reject -- used to return value when promise is rejected
+    }
+})
+promise.then((message)=>{
+    console.log(message)
+}).catch((message)=>{
+    console.log(message)
+})
