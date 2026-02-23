@@ -67,10 +67,32 @@ obj.display()
 const obj2={
   name:'raj'
 }
-function dis(){
-  console.log(this.name)
+function dis(str){
+  console.log(str+this.name)
 }
 dis(obj)
 dis(obj2)
 //undefined
 dis.call(obj)
+//.cal(x) x is treated as this keyword and they become global
+dis.apply(obj,["hi"])
+// let obj2=obj.display;
+// obj2();
+// this is for obj1 only 
+let obj3=obj.display.bind(obj)
+obj3()
+
+//time to recall
+/*
+
+
+
+
+
+
+
+
+
+
+
+*/
