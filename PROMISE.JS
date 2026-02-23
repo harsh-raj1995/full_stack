@@ -81,18 +81,26 @@ dis.apply(obj,["hi"])
 // this is for obj1 only 
 let obj3=obj.display.bind(obj)
 obj3()
-
+//promise execute before settimout -micro and macro
 //time to recall
 /*
-
-
-
-
-
-
-
-
-
+async sync- how it is treated in js engine- webapi callstack event task
+let var const
+temporal dead zone and hoisting
+function type datatype
+array object methods
+for each loop
+dom manipulation 
+event handling 
+callback
+promise
+async await
+bind call and apply
+higher order funct
+arrow function
+fetch api and 
+ 
+check on google sheet
 
 
 */
