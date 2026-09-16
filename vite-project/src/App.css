@@ -1,0 +1,66 @@
+.main{
+  background-color: #282c34;
+  width: 100vw;
+  height: 100vh;
+}
+
+.App{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffb9b9;
+
+}
+
+form{
+  width: 90vw;
+  height: 7vh;
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input{ 
+  border: none;
+  border-color: white;
+  width: 70%;
+  height: 80%;
+}
+
+button{
+  background-color: #ffb9b9;
+  width: 20%;
+  border: none;
+  height: 80%;
+  border-radius: 25px;
+}
+.Card{
+  background-color: #ff6262;
+  width: 80vw;
+  display: flex;
+  justify-content:end;
+  gap :30vw;
+  height: 50px;
+  padding-top: 8px;
+  padding-right: 5px;
+
+}
+.card button{
+  width: 10%;
+  height: 80%;
+  border-radius: 25px;
+}
+.List{
+  align-content: center;
+  color: aliceblue;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+
+}
+.completed{
+  background-color: rgb(212, 255, 241);
+}
