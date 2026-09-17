@@ -1,0 +1,129 @@
+:root {
+	font-family: 'Courier New', Courier, monospace;
+	color: #f2f2f2;
+	background: #090909;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+	margin: 0;
+	background: #090909;
+}
+
+#root {
+	display: grid;
+	min-height: 100vh;
+	place-items: center;
+	padding: 48px 16px;
+	background: repeating-linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0.025) 0,
+		rgba(255, 255, 255, 0.025) 1px,
+		transparent 1px,
+		transparent 4px
+	);
+}
+
+h3 {
+	width: min(100%, 520px);
+	margin: 0 auto 24px;
+	color: #fff;
+	font: 700 clamp(1.6rem, 5vw, 2.4rem) 'Courier New', Courier, monospace;
+	letter-spacing: 0;
+	text-align: left;
+}
+
+h3::before {
+	content: '> ';
+	color: #999;
+}
+
+form {
+	width: min(100%, 520px);
+	padding: clamp(28px, 6vw, 48px);
+	border: 1px solid #777;
+	border-radius: 0;
+	background: #111;
+	box-shadow: 8px 8px 0 #333;
+}
+
+label {
+	display: inline-block;
+	margin: 0 0 8px;
+	color: #d5d5d5;
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+label::before {
+	content: '$ ';
+	color: #888;
+}
+
+input {
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 13px 14px;
+	border: 1px solid #555;
+	border-radius: 0;
+	color: #fff;
+	background: #050505;
+	font: inherit;
+	outline: none;
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+	color: #666;
+}
+
+input:focus {
+	border-color: #fff;
+	box-shadow: 0 0 0 1px #fff;
+}
+
+button {
+	width: 100%;
+	margin-top: 4px;
+	padding: 14px 18px;
+	border: 1px solid #fff;
+	border-radius: 0;
+	color: #050505;
+	background: #fff;
+	font: 700 0.95rem 'Courier New', Courier, monospace;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+	color: #fff;
+	background: #050505;
+}
+
+button:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 3px;
+}
+
+@media (max-width: 560px) {
+	#root {
+		padding: 32px 12px;
+	}
+
+	h3 {
+		font-size: 1.65rem;
+	}
+
+	form {
+		padding: 28px 22px;
+		box-shadow: 5px 5px 0 #333;
+	}
+}

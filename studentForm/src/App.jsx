@@ -18,6 +18,7 @@ function App() {
   return (
     <>
       <Form  fun={handleData}/>
+      <br></br>
       <Display data={data} />
     </>
   )
