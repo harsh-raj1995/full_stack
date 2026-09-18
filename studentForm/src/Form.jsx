@@ -15,7 +15,7 @@ function Form(props){
     props.fun(data)
     console.log("Data sent to App")
     axios.post("https://jsonplaceholder.typicode.com/users",data)
-    .then((obj)=>(console.log("data sent...........")))
+    .then((obj)=>(console.log(obj)))
     .catch((err)=>(console.log("error occured......")))
   }
   let handleChange=(e)=>{
