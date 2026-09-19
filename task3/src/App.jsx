@@ -65,8 +65,7 @@ function App() {
   { id: 50, name: "Shivani Gupta", age: 20, course: "Information Technology", year: 2, email: "shivani@example.com", marks: 91 }
 ];
   return (
-    <>
-    <h1>StudentsInfo</h1>
+    <div className="app-shell">
     <Navbar />
     <Routes>
       <Route path='/' element={<Home />}/>
@@ -75,8 +74,7 @@ function App() {
       <Route path='/about' element={<About />}/>
       <Route path='*' element={<NotFound />}/>
     </Routes>
-    
-    </>
+    </div>
   )
 }
 
