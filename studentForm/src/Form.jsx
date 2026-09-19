@@ -22,24 +22,23 @@ function Form(props){
     setData({...data,[e.target.name]:e.target.value})
   }
     return(
-      <>
-      <h3>Student Form</h3>
-      <form onSubmit={handleForm} >
-        <label>Name : </label>
-        <input name="name" value={data.name} onChange={handleChange} placeholder="Enter Your name" required></input>
-        <br></br>
-        <label>Email : </label>
-        <input name="email" placeholder="Enter Valid email id" value={data.email} onChange={handleChange} required></input>
-        <br></br>
-        <label >Course : </label>
-        <input name="course" placeholder="Enter prefered Course" value={data.course} onChange={handleChange} required></input>
-        <br></br>
-        <label>Phone : </label>
-        <input name="phone" placeholder="Enter phone no..." value={data.phone} onChange={handleChange} required></input>
-        <br></br>
-        <button type="Submit">Submit</button>
-      </form>
-      </>
+      <section className="form-panel" aria-labelledby="form-title">
+        <div className="section-heading">
+          <p className="card-number">01</p>
+          <h2 id="form-title">Add a student</h2>
+        </div>
+        <form onSubmit={handleForm}>
+          <label htmlFor="name">Name</label>
+          <input id="name" name="name" value={data.name} onChange={handleChange} placeholder="Your name" required />
+          <label htmlFor="email">Email</label>
+          <input id="email" name="email" placeholder="you@example.com" value={data.email} onChange={handleChange} required />
+          <label htmlFor="course">Course</label>
+          <input id="course" name="course" placeholder="Your course" value={data.course} onChange={handleChange} required />
+          <label htmlFor="phone">Phone</label>
+          <input id="phone" name="phone" placeholder="Your phone number" value={data.phone} onChange={handleChange} required />
+          <button type="submit">Submit student <span aria-hidden="true">↗</span></button>
+        </form>
+      </section>
     )
 }
 export default Form

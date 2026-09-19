@@ -37,31 +37,56 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Todo List</h1>
-      <form onSubmit={handleForm}>
-        <input
-          type="text"
-          placeholder="Add your Task here..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button type="submit">Add</button>
-      </form>
+      <header className="site-header">
+        <div className="brand">DO<span>.</span></div>
+        <nav aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#tasks">Tasks</a>
+          <a href="#about">About</a>
+        </nav>
+      </header>
 
-      <div className="list-container">
-        {list.length === 0 ? (
-          <p className="empty-msg">No tasks added yet!</p>
-        ) : (
-          list.map((item) => (
-            <Items
-              key={item.id}
-              item={item}
-              onToggle={handleToggle}
-              onDelete={handleDelete}
-            />
-          ))
-        )}
-      </div>
+      <main id="home">
+        <section className="intro" aria-labelledby="page-title">
+          <p className="eyebrow">A quiet place for busy minds</p>
+          <h1 id="page-title">
+            Make room for
+            <br /> <em>progress.</em>
+          </h1>
+          <p className="intro-copy" id="about">
+            A considered list for the small steps, big plans, and work worth
+            finishing next.
+          </p>
+        </section>
+
+        <section className="directory" id="tasks" aria-label="Todo list">
+          <div className="decorative-circle" aria-hidden="true" />
+          {list.length === 0 ? (
+            <p className="empty-msg">Nothing here yet.</p>
+          ) : (
+            list.map((item, index) => (
+              <Items
+                key={item.id}
+                item={item}
+                index={index}
+                onToggle={handleToggle}
+                onDelete={handleDelete}
+              />
+            ))
+          )}
+        </section>
+
+        <form className="add-student" onSubmit={handleForm}>
+          <input
+            type="text"
+            placeholder="Add a task"
+            aria-label="Add a task"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button type="submit">Add task</button>
+        </form>
+      </main>
     </div>
   )
 }

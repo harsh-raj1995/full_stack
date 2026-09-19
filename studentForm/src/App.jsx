@@ -16,11 +16,10 @@ function App() {
     console.log("upper")
   }
   return (
-    <>
-      <Form  fun={handleData}/>
-      <br></br>
+    <main className="content-grid">
+      <Form fun={handleData}/>
       <Display data={data} />
-    </>
+    </main>
   )
 }
 
