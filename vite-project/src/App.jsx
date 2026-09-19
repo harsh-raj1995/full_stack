@@ -37,14 +37,6 @@ function App() {
 
   return (
     <div className="App">
-      <header className="site-header">
-        <div className="brand">DO<span>.</span></div>
-        <nav aria-label="Main navigation">
-          <a href="#home">Home</a>
-          <a href="#tasks">Tasks</a>
-          <a href="#about">About</a>
-        </nav>
-      </header>
 
       <main id="home">
         <section className="intro" aria-labelledby="page-title">
@@ -59,6 +51,17 @@ function App() {
           </p>
         </section>
 
+        <form className="add-student" onSubmit={handleForm}>
+          <input
+            type="text"
+            placeholder="Add a task"
+            aria-label="Add a task"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button type="submit">Add task</button>
+        </form>
+        <br></br>
         <section className="directory" id="tasks" aria-label="Todo list">
           <div className="decorative-circle" aria-hidden="true" />
           {list.length === 0 ? (
@@ -76,16 +79,7 @@ function App() {
           )}
         </section>
 
-        <form className="add-student" onSubmit={handleForm}>
-          <input
-            type="text"
-            placeholder="Add a task"
-            aria-label="Add a task"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-          <button type="submit">Add task</button>
-        </form>
+        
       </main>
     </div>
   )

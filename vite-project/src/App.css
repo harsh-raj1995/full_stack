@@ -9,7 +9,7 @@
 
 .App {
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 0 7.5vw 72px;
   color: var(--ink);
   background: var(--paper);
@@ -32,18 +32,18 @@ nav a { color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: 
 nav a:hover { color: var(--ink); }
 
 main { max-width: 1100px; margin: 0 auto; }
-.intro { position: relative; min-height: 410px; padding-top: 68px; }
+.intro { position: relative; min-height: 490px; padding-top: 68px; }
 .eyebrow { margin: 0 0 14px; color: var(--coral); font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
-h1 { max-width: 700px; margin: 0; font-size: clamp(68px, 8vw, 108px); line-height: .9; letter-spacing: -6px; font-weight: 900; }
+h1 { max-width: 900px; margin: 0; font-size: clamp(68px, 8vw, 108px); line-height: .94; letter-spacing: -6px; font-weight: 900; overflow-wrap: break-word; }
 h1 em { color: var(--blue); font-family: Georgia, serif; font-size: 1.03em; font-weight: 400; letter-spacing: -7px; }
-.intro-copy { position: absolute; right: 4px; bottom: 24px; width: 205px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.intro-copy { position: absolute; right: 4px; bottom: 34px; width: 205px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
 
 .directory { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.decorative-circle { position: absolute; z-index: 0; width: 238px; height: 238px; right: -4px; top: -61px; border-radius: 50%; background: #f5d1c6; }
+.decorative-circle { position: absolute; z-index: 0; width: 238px; height: 238px; right: -4px; top: 12px; border-radius: 50%; background: #f5d1c6; }
 .Card { position: relative; z-index: 1; min-height: 220px; padding: 28px 23px 20px; border: 1px solid var(--line); background: rgba(255, 253, 249, .74); display: flex; flex-direction: column; }
 .card-number { color: var(--coral); font-size: 11px; font-weight: 800; }
 .card-content { margin-top: 28px; }
-.List { font-size: 24px; font-weight: 800; letter-spacing: -1.2px; }
+.List { font-size: 24px; line-height: 1.1; font-weight: 800; letter-spacing: -1.2px; overflow-wrap: anywhere; word-break: break-word; }
 .discipline { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
 .task-done { text-decoration: line-through; opacity: .55; }
 .buttons { display: flex; gap: 8px; margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line); }
@@ -62,10 +62,10 @@ button { cursor: pointer; border: 0; font: inherit; }
   .site-header { height: 68px; }
   nav { gap: 14px; }
   nav a { font-size: 9px; }
-  .intro { min-height: 360px; padding-top: 54px; }
-  h1 { font-size: clamp(58px, 17vw, 88px); letter-spacing: -4px; }
+  .intro { min-height: 460px; padding-top: 54px; }
+  h1 { max-width: 100%; font-size: clamp(58px, 17vw, 88px); letter-spacing: -4px; }
   h1 em { letter-spacing: -5px; }
   .intro-copy { left: 0; right: auto; bottom: 34px; width: 230px; }
   .directory { grid-template-columns: 1fr; gap: 12px; }
-  .decorative-circle { width: 180px; height: 180px; top: 320px; right: -65px; }
+  .decorative-circle { width: 180px; height: 180px; top: 20px; right: -65px; }
 }
